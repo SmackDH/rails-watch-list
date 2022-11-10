@@ -23,12 +23,3 @@ response['results'].each do |movie_hash|
     rating: movie_hash['vote_average']
   )
 end
-
-# Create a couple of lists.
-List.create!(name: "Drama")
-List.create!(name: "Action")
-List.create!(name: "Thriller")
-List.create!(name: "Comedy")
-
-# Create some bookmarks
-Bookmark.create!(comment: "Best movie ever!")
