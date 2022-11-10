@@ -1,0 +1,9 @@
+<h1>This will be the list-page.</h1>
+<ul>
+  <% @lists.each do |list|%>
+    <%= link_to list.name, list_path(list) %>
+  <%  end %>
+</ul>
+<div class="new">
+  <%= link_to 'New List', new_list_path %>
+</div>
