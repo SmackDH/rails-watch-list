@@ -9,12 +9,21 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
   <body class="">
-    <nav class="navbar-lewagon sticky-top">
-      <div class="container">
-        <a href="" class="navbar-brand text-white p-2">
-          <img src="https://www.picng.com/upload/shrek/png_shrek_76605.png" alt="logo" width="30">Shreks</a>
-      </div>
-    </nav>
-    <%= yield %>
+    <div class="content">
+      <nav class="navbar-lewagon sticky-top">
+        <div class="container">
+          <div class="menu_title text-white p-2">
+            <h2>Wishlist</h2>
+          </div>
+          <div class="menu_links">
+            <%= link_to 'Add List', new_list_path, class: "btn-user btn btn-sm btn-primary btn-login"%>
+          </div>
+        </div>
+      </nav>
+      <%= yield %>
+    </div>
+    <div class="footer">
+      <p>Copyright © <a href="https://github.com/smackdh">Mattias</a> | Le Wagon 2022</p>
+    </div>
   </body>
 </html>

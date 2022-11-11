@@ -1,6 +1,24 @@
 .navbar-lewagon {
+  display: flex;
+  align-items: center;
   justify-content: space-between;
-  background: rgb(48, 48, 48);
+  background: rgb(42,44,49);
+  height: 100px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .btn-user {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 15px;
+    font-weight: 400;
+    margin-left: 15px;
+    color: #2a2c31;
+  }
 }
 
 .navbar-lewagon .navbar-collapse {

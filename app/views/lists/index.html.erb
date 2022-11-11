@@ -10,20 +10,14 @@
             <% else %>
               <%= image_tag list.bookmarks.any? ? list.bookmarks.first.movie.poster_url : "", alt: "text" %>
             <% end %>
-            <div>
-              <%= list.name %>
-            </div>
           </div>
           <div class="card__bottom">
             <p class="pt-2">
-              <%= link_to 'View', list_path(list) %>
+              <%= link_to list.name, list_path(list) %>
             </p>
           </div>
         </div>
       </div>
     <%  end %>
   </div>
-</div>
-<div class="new">
-  <%= link_to 'New List', new_list_path %>
 </div>

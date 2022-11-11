@@ -1,8 +1,13 @@
 // Specific CSS for your home-page
 
-body {
-  background: rgb(48, 48, 48);
+html, body {
+  height: 100%;
   margin: 0;
+  background: #202125;
+}
+
+.content {
+  min-height:100%;
 }
 
 #grid {
@@ -11,4 +16,11 @@ body {
     .profile {
       padding: 7px;
     }
+}
+
+
+.footer {
+  height: 50px;
+  margin-top: 50px;
+  background: rgb(42,44,49);
 }
