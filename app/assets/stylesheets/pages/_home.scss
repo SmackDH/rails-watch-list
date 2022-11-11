@@ -6,8 +6,12 @@ html, body {
   background: #202125;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+}
 .content {
-  min-height:100%;
+  flex: 1 0;
 }
 
 #grid {
@@ -16,11 +20,4 @@ html, body {
     .profile {
       padding: 7px;
     }
-}
-
-
-.footer {
-  height: 50px;
-  margin-top: 50px;
-  background: rgb(42,44,49);
 }

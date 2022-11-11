@@ -12,10 +12,12 @@
             <% end %>
           </div>
           <div class="card__bottom">
-            <p class="pt-2">
-              <%= link_to list.name, list_path(list) %>
-            </p>
-          </div>
+            <%= link_to(list_path(list)) do %>
+              <p class="pt-2">
+                <%= list.name %>
+              </p>
+            </div>
+          <% end %>
         </div>
       </div>
     <%  end %>

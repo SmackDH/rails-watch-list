@@ -3,8 +3,11 @@
   align-items: center;
   justify-content: space-between;
   background: rgb(42,44,49);
-  height: 100px;
+  height: 85px;
 
+  h2 {
+    color: $blue
+  }
   .container {
     display: flex;
     justify-content: space-between;
