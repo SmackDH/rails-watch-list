@@ -1,12 +1,14 @@
-<h1>This will be the list-page.</h1>
+<h1> </h1>
 <div id="grid" class="container">
   <div class="row">
     <% @lists.each do |list|%>
       <div class="col-sm-4 profile">
         <div class="card">
           <div class="card__top">
-            <% list.bookmarks.find do |bookmark| %>
-              <img src="<%=bookmark.movie.poster_url %>" alt="Card image cap">
+            <% if list.photo.attached?  %>
+              <%= cl_image_tag list.photo.key, alt: "text" %>
+            <% else %>
+              <%= image_tag list.bookmarks.any? ? list.bookmarks.first.movie.poster_url : "", alt: "text" %>
             <% end %>
             <div>
               <%= list.name %>
