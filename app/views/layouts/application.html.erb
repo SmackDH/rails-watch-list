@@ -5,12 +5,16 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
-
-  <body>
+  <body class="">
+    <nav class="navbar-lewagon sticky-top">
+      <div class="container">
+        <a href="" class="navbar-brand text-white p-2">
+          <img src="https://www.picng.com/upload/shrek/png_shrek_76605.png" alt="logo" width="30">Shreks</a>
+      </div>
+    </nav>
     <%= yield %>
   </body>
 </html>
