@@ -1,10 +1,19 @@
 
-  .card {
+  .index-card {
     background-color: rgb(42,44,49);
     height: 300px;
+    // width: 200px;
     border-radius: 10px;
     overflow: hidden;
-    &__top {
+
+    img {
+      object-fit:cover;
+      width: 100%;
+      border-radius: 3px;
+      margin-bottom: 15px;
+    }
+
+    .card__top {
       overflow: hidden;
       display: flex;
       justify-content: center;
@@ -13,19 +22,15 @@
       height: 80%;
       color: grey;
       opacity: 0.8;
-      img {
-        object-fit:cover;
-        border-radius: 3px;
-        margin-bottom: 15px;
-      }
+
       span:nth-child(2) {
         font-weight: bold;
         font-size: 1.5em;
       }
     }
-    &__bottom {
+
+    .card__bottom {
       height: 20%;
-      // background-color: #3D3E43;
       background-color: $blue;
       color: #3D3E43;
       display: flex;
@@ -36,7 +41,6 @@
 
       & > div > div:nth-child(2) {
         font-weight: bold;
-        width: 100%;
       }
 
       a {

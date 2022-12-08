@@ -2,6 +2,9 @@
   &.show {
     height: fit-content;
 
+    .card__top {
+    }
+
     .card__bottom {
       flex-direction: column;
       text-align: center;

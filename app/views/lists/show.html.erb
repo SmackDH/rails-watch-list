@@ -3,7 +3,7 @@
     <% @list.bookmarks.each do |bookmark| %>
       <div class="col-sm-4 profile">
         <div class="card show">
-          <div class="card__top">
+          <div class="card__top" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= bookmark.movie.poster_url %>)">>
             This should be an image.
           </div>
           <div class="card__bottom">
