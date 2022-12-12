@@ -17,6 +17,12 @@ body {
 .container-mid {
   width: 80%;
   margin: 6rem auto;
+
+  h1{
+    text-align:center;
+    color: $blue;
+    margin-bottom: 16px;
+  }
 }
 
 #grid {
