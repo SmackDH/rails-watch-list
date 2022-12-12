@@ -1,14 +1,27 @@
 #new_list {
-  width: 80%;
+  width: 65%;
   margin: auto;
+  display:flex;
+  flex-direction: column;
 
+  label {
+    font-size: 16px;
+    color:white;
+    padding-bottom:8px;
+  }
   input {
+    padding-inline-start: 1rem;
     height:50px;
     border-radius: 30px;
     font-size:16px;
     border: none !important;
-
   }
+
+  #list_photo{
+    // width: 15%;
+    color:white;
+  }
+
 
   .button {
     background-color: #cae962;
