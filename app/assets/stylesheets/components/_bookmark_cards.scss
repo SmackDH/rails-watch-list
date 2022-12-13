@@ -1,15 +1,15 @@
 .card {
   &.show {
     // height: fit-content;
-
     background: #2a2c31;
+    border-radius: 8px;
 
     .card__top {
       position: relative;
       overflow: hidden;
       display:block;
       padding-bottom: 130%;
-      border-radius: 0;
+      border-radius: 8px;
 
       .poster-image{
         position: absolute;
@@ -52,6 +52,8 @@
 
         a {
           text-decoration: none;
+          cursor: pointer;
+
         }
       }
     }
@@ -75,6 +77,9 @@
     h5 {
       color:white;
     }
+
+
+
 
   }
 
