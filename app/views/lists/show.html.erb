@@ -3,12 +3,26 @@
     <% @list.bookmarks.each do |bookmark| %>
       <div class="col-sm-4 profile">
         <div class="card show">
-          <div class="card__top" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= bookmark.movie.poster_url %>)">>
-            This should be an image.
+          <div class="card__top">
+            <div>
+              <h5><%= link_to "X", bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></h5>
+            </div>
+            <img src="<%= bookmark.movie.poster_url %>" alt="" class="poster-image">
+            <a href="#"></a>
           </div>
           <div class="card__bottom">
-            <h5><%= bookmark.comment %> | <%= link_to "X", bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></h5>
-            <p><%= bookmark.movie.overview %></p>
+            <div class="description">
+              <h3 class="movie-name">
+                <%= bookmark.movie.title %>
+              </h3>
+              <p><%= truncate(bookmark.movie.overview, length: 200, omission: '... (continued)') %></p>
+            </div>
+            <div class="comment">
+              <h5>Comment</h5>
+              <p>
+                <%= bookmark.comment %>
+              </p>
+            </div>
           </div>
         </div>
       </div>
