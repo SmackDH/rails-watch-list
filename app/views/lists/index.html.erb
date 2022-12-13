@@ -13,7 +13,7 @@
           <div class="card__bottom">
             <%= link_to(list_path(list)) do %>
               <p class="pt-2">
-                <%= list.name %>
+                <%= list.name.upcase %>
               </p>
             </div>
           <% end %>
