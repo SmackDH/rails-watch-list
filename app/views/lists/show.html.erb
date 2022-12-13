@@ -4,11 +4,13 @@
       <div class="col-sm-4 profile">
         <div class="card show">
           <div class="card__top">
-            <div>
-              <h5><%= link_to "X", bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></h5>
-            </div>
             <img src="<%= bookmark.movie.poster_url %>" alt="" class="poster-image">
-            <a href="#"></a>
+            <a id="info" href="#"></a>
+            <h5>
+              <%= link_to bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+                <i class="fa-solid fa-square-minus"></i>
+              <% end %>
+            </h5>
           </div>
           <div class="card__bottom">
             <div class="description">
@@ -20,7 +22,7 @@
             <div class="comment">
               <h5>Comment</h5>
               <p>
-                <%= bookmark.comment %>
+                <%= truncate(bookmark.comment, length: 100, omission: '... (continued)') %>
               </p>
             </div>
           </div>
