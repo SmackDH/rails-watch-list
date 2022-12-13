@@ -33,6 +33,7 @@
         background: linear-gradient(0deg,#2a2c31 0,rgba(7,53,57,0) 60%);
       }
 
+
       h5 {
         font-size: 2rem;
         z-index: 5;
@@ -50,9 +51,32 @@
         justify-content: center;
         align-items: center;
 
+
         a {
           text-decoration: none;
           cursor: pointer;
+
+        }
+
+      }
+
+      .tick {
+        position: absolute;
+        bottom:3px;
+        z-index:10;
+
+        .rating {
+          position:relative;
+          left:16px;
+          font-size: 16px;
+          font-family: arial;
+          font-weight: 600;
+          display: inline-block;
+          line-height: 1.2em;
+          padding: 2px 4px;
+          border-radius: 5px;
+          background: #cae962;
+          color: #111;
 
         }
       }

@@ -4,8 +4,13 @@
       <div class="col-sm-4 profile">
         <div class="card show">
           <div class="card__top">
+            <div class="tick">
+              <div class="rating">
+                <%= bookmark.movie.rating.to_f %>
+              </div>
+            </div>
             <img src="<%= bookmark.movie.poster_url %>" alt="" class="poster-image">
-            <div id="info" ></div>
+            <div id="info"></div>
             <h5>
               <%= link_to bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
                 <i class="fa-solid fa-square-minus"></i>
