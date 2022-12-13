@@ -9,9 +9,11 @@
                 Rating: <%= bookmark.movie.rating.to_f %>
               </div>
             </div>
-            <div class="tick tick-right">
-              <div class="age-group">18+</div>
-            </div>
+            <% if bookmark.movie.adult? %>
+              <div class="tick tick-right">
+                <div class="age-group">18+</div>
+              </div>
+            <% end %>
             <img src="<%= bookmark.movie.poster_url %>" alt="" class="poster-image">
             <div id="info"></div>
             <div class="del-bookmark">

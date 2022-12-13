@@ -7,6 +7,7 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 require 'open-uri'
+Bookmark.destroy_all
 Movie.destroy_all
 List.destroy_all
 
@@ -20,6 +21,7 @@ response['results'].each do |movie_hash|
     title: movie_hash['original_title'],
     overview: movie_hash['overview'],
     poster_url: "https://image.tmdb.org/t/p/w500" + movie_hash['poster_path'],
-    rating: movie_hash['vote_average']
+    rating: movie_hash['vote_average'],
+    adult: movie_hash['adult']
   )
 end
