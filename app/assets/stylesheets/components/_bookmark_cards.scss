@@ -34,11 +34,12 @@
       }
 
 
-      h5 {
+      .del-bookmark {
         font-size: 2rem;
+        // background-color:black;
         z-index: 5;
         position:absolute;
-        top: 16px;
+        top: 8px;
         left: 16px;
         text-shadow: 1px 1px 2px #00000063;
 
@@ -56,9 +57,8 @@
         bottom:3px;
         z-index:10;
 
-        .rating {
+        .rating, .age-group {
           position:relative;
-          left:16px;
           font-size: 16px;
           font-family: arial;
           font-weight: 600;
@@ -68,7 +68,18 @@
           border-radius: 5px;
           background: #cae962;
           color: #111;
+        }
+      }
 
+      .tick-left {
+        left: 16px;
+      }
+
+      .tick-right {
+        right: 16px;
+
+        .age-group {
+          background: #ff5700;
         }
       }
     }

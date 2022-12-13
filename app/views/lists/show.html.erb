@@ -4,18 +4,21 @@
       <div class="col-sm-4 profile">
         <div class="card show">
           <div class="card__top">
-            <div class="tick">
+            <div class="tick tick-left">
               <div class="rating">
-                <%= bookmark.movie.rating.to_f %>
+                Rating: <%= bookmark.movie.rating.to_f %>
               </div>
+            </div>
+            <div class="tick tick-right">
+              <div class="age-group">18+</div>
             </div>
             <img src="<%= bookmark.movie.poster_url %>" alt="" class="poster-image">
             <div id="info"></div>
-            <h5>
+            <div class="del-bookmark">
               <%= link_to bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
                 <i class="fa-solid fa-square-minus"></i>
               <% end %>
-            </h5>
+            </div>
           </div>
           <div class="card__bottom">
             <div class="description">
