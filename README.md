@@ -1,24 +1,56 @@
-# README
+# 🎬 Watchlist
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Create movie-lists and bookmark your favorite movies!
 
-Things you may want to cover:
+<img src="https://user-images.githubusercontent.com/66011769/207251276-045b8546-e438-42ad-b870-bda93d79726e.png" width=50% height=50%>
+<img src="https://user-images.githubusercontent.com/66011769/207252011-f78eb3d3-9c9c-43ed-9acb-4a3210115f62.png" width=50% height=50%>
 
-* Ruby version
 
-* System dependencies
+<br>
+App home: https://mattias-watchlist.herokuapp.com/
+   
 
-* Configuration
+## Getting Started
+### Setup
 
-* Database creation
+Install gems
+```
+bundle install
+```
+Install JS packages
+```
+yarn install
+```
 
-* Database initialization
+### ENV Variables
+Create `.env` file
+```
+touch .env
+```
+Inside `.env`, set these variables. For any APIs, see group Slack channel.
+```
+CLOUDINARY_URL=your_own_cloudinary_url_key
+```
 
-* How to run the test suite
+### DB Setup
+```
+rails db:create
+rails db:migrate
+rails db:seed
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+### Run a server
+```
+rails s
+```
 
-* Deployment instructions
+## Built With
+- [Rails 7](https://guides.rubyonrails.org/) - Backend / Front-end
+- [Stimulus JS](https://stimulus.hotwired.dev/) - Front-end JS
+- [Heroku](https://heroku.com/) - Deployment
+- [PostgreSQL](https://www.postgresql.org/) - Database
+- [Bootstrap](https://getbootstrap.com/) — Styling
+- [Figma](https://www.figma.com) — Prototyping
 
-* ...
+## License
+This project is licensed under the MIT License
