@@ -4,7 +4,9 @@ default: &default
   pool: 5
 
 development:
-  <<: *default
+  adapter: postgresql
+  host: localhost
+  username: user
   database: rails-watch-list_development
 
 test:
